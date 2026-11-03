@@ -28,12 +28,12 @@ const giftRegistry = {
 };
 
 export const wedding = {
-  dateISO: "2027-04-12T14:00:00",
+  dateISO: "2025-04-12T14:00:00",
 
   meta: {
-    title: "Sam & Eder · 12 de abril de 2027",
+    title: "Sam & Eder · 12 de abril de 2025",
     description:
-      "Nos casamos el 12 de abril de 2027 en Tultitlán, Estado de México. Acompáñanos a celebrar este día tan especial.",
+      "El sábado 12 de abril de 2025 celebramos nuestra boda en Tultitlán, Estado de México. Gracias por acompañarnos en este día tan especial.",
     // TODO: dato real
     siteUrl: "https://example.com",
     ogImage: "/img/hero.jpg",
@@ -52,7 +52,7 @@ export const wedding = {
     first: "Sam",
     amp: "y",
     second: "Eder",
-    details: `12 . 04 . 2027 ${SEP} Tultitlán, Estado de México`,
+    details: `12 . 04 . 2025 ${SEP} Tultitlán, Estado de México`,
     image: { src: "/img/hero.jpg", alt: "Pareja de novios abrazados" },
   },
 
@@ -60,21 +60,21 @@ export const wedding = {
     daysToGo: (days: number) => `Faltan ${days} días`,
     tomorrow: "¡Es mañana!",
     today: "¡Hoy es el día!",
-    married: "Felizmente casados",
+    married: "Felizmente casados desde el 12 de abril de 2025",
   },
 
   statement: {
     lead: "Junto con nuestras familias",
     title: "Te invitamos a celebrar nuestra\u00a0boda",
     lines: [
-      "Doce de abril de dos mil veintisiete",
+      "Sábado doce de abril de dos mil veinticinco",
       `Ceremonia religiosa a las 2:00\u00a0p.m. ${SEP} ${ceremony.name}`,
     ],
     flourish: "S & E",
   },
 
   itinerary: {
-    label: "12 de abril",
+    label: "Sábado 12 de abril",
     title: "Itinerario",
     image: {
       src: "/img/aisle.jpg",
@@ -164,7 +164,7 @@ export const wedding = {
   },
 
   footer: {
-    date: "Doce de abril de dos mil veintisiete",
+    date: "Doce de abril de dos mil veinticinco",
     first: "Sam",
     amp: "&",
     second: "Eder",
