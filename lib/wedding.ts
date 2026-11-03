@@ -34,9 +34,16 @@ export const wedding = {
     title: "Sam & Eder · 12 de abril de 2025",
     description:
       "El sábado 12 de abril de 2025 celebramos nuestra boda en Tultitlán, Estado de México. Gracias por acompañarnos en este día tan especial.",
-    // TODO: dato real
-    siteUrl: "https://example.com",
-    ogImage: "/img/hero.jpg",
+    shortName: "Sam & Eder",
+    // TODO: dato real (confirmar la URL que asigne Vercel)
+    siteUrl: "https://boda-sam-eder.vercel.app",
+    ogImage: {
+      src: "/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Sam y Eder · 12 de abril de 2025 · Tultitlán, Estado de México",
+    },
+    themeColors: { paper: "#F7F4ED", sagedeep: "#3C4234" },
   },
 
   nav: {
