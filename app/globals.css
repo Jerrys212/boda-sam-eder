@@ -130,11 +130,12 @@ body.loaded .hero-fig .cap{opacity:1}
 .travel .addr{font-style:italic;color:rgba(242,238,228,.75);margin-bottom:18px;font-size:19px}
 .travel-intro{color:rgba(242,238,228,.75);font-weight:300;font-size:18px}
 .travel-head .rbtn{justify-self:end;margin-bottom:4px}
-.travel-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,70px);
+.travel-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,4vw,70px);
   margin-top:clamp(44px,5.4vw,80px);border-top:1px solid rgba(242,238,228,.18);padding-top:clamp(36px,4.4vw,64px)}
 .travel-cols h3{font-family:var(--serif);font-weight:400;font-size:23px;margin-bottom:14px;letter-spacing:.03em}
 .travel-cols p{color:rgba(242,238,228,.75);font-size:17.5px;line-height:1.85;font-weight:300}
 .travel-cols .lbl{display:block;margin-bottom:8px}
+.travel-cols .rbtn{margin-top:28px}
 .travel-foot{margin-top:clamp(70px,9vw,140px)}
 
 /* ============ dress code ============ */
