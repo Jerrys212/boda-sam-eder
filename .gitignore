@@ -1,0 +1,7 @@
+.vercel/
+.env*
+!.env.example
+.DS_Store
+
+# Bitácora personal de aprendizaje de Git (no se sube al repo)
+GIT_APRENDIZAJE.md
