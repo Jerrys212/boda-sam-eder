@@ -5,3 +5,10 @@
 
 # Bitácora personal de aprendizaje de Git (no se sube al repo)
 GIT_APRENDIZAJE.md
+
+# Next.js
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
