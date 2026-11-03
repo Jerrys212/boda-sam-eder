@@ -1,157 +1,178 @@
-const SEP = " · ";
+const SEP = "\u00a0·\u00a0";
+
+const mapsUrl = (query: string) =>
+  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+
+const ceremony = {
+  name: "Parroquia de San Antonio de Padua",
+  address:
+    "Plaza Principal No. 1, Col. Centro, C.P. 54900, Tultitlán de Mariano Escobedo, Estado de México",
+};
+
+const reception = {
+  name: "Salón Rincón Colonial",
+  address:
+    "Jaime Torres Bodet 42, Nativitas, C.P. 54900, Tultitlán de Mariano Escobedo, Estado de México",
+};
+
+const giftRegistry = {
+  store: "El Palacio de Hierro",
+  // TODO: dato real
+  eventNumber: "000000",
+  // TODO: dato real
+  bank: "[BANCO EJEMPLO]",
+  // TODO: dato real
+  holder: "Sam y Eder",
+  // TODO: dato real
+  clabe: "000 000 0000000000 0",
+};
 
 export const wedding = {
-  dateISO: "2027-06-14T14:00:00",
+  dateISO: "2027-04-12T14:00:00",
 
   meta: {
-    title: "Margot & Henry, 14 June 2027",
+    title: "Sam & Eder · 12 de abril de 2027",
+    description:
+      "Nos casamos el 12 de abril de 2027 en Tultitlán, Estado de México. Acompáñanos a celebrar este día tan especial.",
     // TODO: dato real
     siteUrl: "https://example.com",
     ogImage: "/img/hero.jpg",
   },
 
   nav: {
-    monogram: { first: "M", amp: "&", second: "H" },
+    monogram: { first: "S", amp: "&", second: "E" },
     links: [
-      { href: "#day", label: "the day" },
-      { href: "#travel", label: "getting there" },
-      { href: "#faq", label: "questions" },
+      { href: "#day", label: "el día" },
+      { href: "#travel", label: "ubicaciones" },
+      { href: "#faq", label: "preguntas" },
     ],
   },
 
   hero: {
-    first: "Margot",
-    amp: "and",
-    second: "Henry",
-    details: `14 . 06 . 2027 ${SEP} Ashfield House, Hertfordshire`,
-    image: { src: "/img/hero.jpg", alt: "Margot and Henry" },
-    caption: "Norfolk, last September",
+    first: "Sam",
+    amp: "y",
+    second: "Eder",
+    details: `12 . 04 . 2027 ${SEP} Tultitlán, Estado de México`,
+    image: { src: "/img/hero.jpg", alt: "Pareja de novios abrazados" },
   },
 
   countdown: {
-    daysToGo: (days: number) => `${days} days to go`,
-    tomorrow: "Tomorrow. Tomorrow!",
-    today: "Today is the day",
-    married: "Happily married",
+    daysToGo: (days: number) => `Faltan ${days} días`,
+    tomorrow: "¡Es mañana!",
+    today: "¡Hoy es el día!",
+    married: "Felizmente casados",
   },
 
   statement: {
-    lead: "Together with our families",
-    title: "We invite you to celebrate our marriage",
+    lead: "Junto con nuestras familias",
+    title: "Te invitamos a celebrar nuestra\u00a0boda",
     lines: [
-      "Saturday the fourteenth of June, two thousand and twenty seven",
-      `Ceremony at two o’clock ${SEP} Ashfield House, Hertfordshire`,
+      "Doce de abril de dos mil veintisiete",
+      `Ceremonia religiosa a las 2:00\u00a0p.m. ${SEP} ${ceremony.name}`,
     ],
-    flourish: "M & H",
+    flourish: "S & E",
   },
 
   itinerary: {
-    label: "Saturday 14 June",
-    title: "Order of the day",
-    image: { src: "/img/aisle.jpg", alt: "The ceremony" },
-    caption: "The walled garden",
+    label: "12 de abril",
+    title: "Itinerario",
+    image: {
+      src: "/img/aisle.jpg",
+      alt: "Patio decorado con mesas largas, flores blancas y luces colgantes",
+    },
+    caption: "Todo listo para celebrar",
     events: [
-      { time: "1.30pm", name: "Guests arrive", note: "Find your seat, say hello, settle in" },
-      { time: "2.00pm", name: "The ceremony", note: "In the walled garden, weather permitting" },
-      { time: "3.00pm", name: "Champagne on the lawn", note: "Drinks, canapés and croquet" },
-      { time: "5.00pm", name: "The wedding breakfast", note: "Three courses in the orangery" },
-      { time: "7.30pm", name: "Speeches & cake", note: "Short ones, we promise" },
-      { time: "8.30pm", name: "First dance", note: "Then the floor is yours" },
-      { time: "12.00am", name: "Carriages", note: "Taxis pre-booked from the front gate" },
+      { time: "2:00 p.m.", name: "Ceremonia religiosa", note: `Nos damos el sí en la ${ceremony.name}` },
+      { time: "3:30 p.m.", name: "Recepción", note: `Te esperamos con los brazos abiertos en el ${reception.name}` },
+      { time: "4:00 p.m.", name: "Boda civil", note: "Firmamos rodeados de las personas que más queremos" },
+      { time: "5:00 p.m.", name: "Inicia la fiesta", note: "Ponte cómodo, saluda y disfruta" },
+      { time: "5:30 p.m.", name: "Comida", note: "A la mesa, que hay mucho que celebrar" },
+      { time: "7:30 p.m.", name: "Brindis", note: "Unas palabras breves y a levantar las copas" },
+      { time: "9:00 p.m.", name: "Baile", note: "Nuestro primer baile, y después la pista es tuya" },
+      { time: "11:00 p.m.", name: "Tornafiesta", note: "Para los que aguantan, todavía hay más" },
+      { time: "1:00 a.m.", name: "Fin de la fiesta", note: "Gracias por celebrar con nosotros" },
     ],
   },
 
   breather: {
-    main: { src: "/img/beach.jpg", alt: "Margot and Henry by the sea" },
-    inset: { src: "/img/hands.jpg", alt: "Two rings" },
-    note: "see you there",
+    main: { src: "/img/beach.jpg", alt: "Pareja de novios bailando sobre la arena" },
+    inset: {
+      src: "/img/hands.jpg",
+      alt: "Manos de los novios con sus anillos de boda junto a un ramo de rosas blancas",
+    },
+    note: "¡Te esperamos!",
   },
 
   locations: {
-    label: "Getting there",
-    venue: "Ashfield House",
-    address: "Ashfield Lane, Little Gaddesden, Hertfordshire HP4 1LT",
+    label: "Ubicaciones",
+    title: "Dónde celebraremos",
     intro:
-      "The house sits at the end of a long beech drive, ten minutes from Berkhamsted and forty from central London. Come early if you like; the gardens are yours from one.",
-    map: { label: "Open the map", href: "https://maps.google.com/?q=Ashridge+House" },
-    columns: [
+      "Los dos lugares están en Tultitlán. Aquí tienes las direcciones para que llegues sin contratiempos.",
+    mapLabel: "Ver en el mapa",
+    places: [
       {
-        label: "By car",
-        title: "Forty minutes from London",
-        text: "Leave the M1 at junction 8 and follow the estate signs. Parking is free in the paddock beside the house, and cars may be left overnight.",
+        schedule: `Ceremonia religiosa ${SEP} 2:00\u00a0p.m.`,
+        ...ceremony,
+        mapHref: mapsUrl(`${ceremony.name}, ${ceremony.address}`),
       },
       {
-        label: "By train",
-        title: "Berkhamsted station",
-        // TODO: dato real (teléfono)
-        text: "Thirty five minutes from Euston, then a ten minute taxi. We recommend booking ahead with Ashfield Cars on 01632 960 445.",
-      },
-      {
-        label: "Where to stay",
-        title: "Rooms nearby",
-        text: "We have reserved rooms at The Gaddesden Arms, five minutes away. Mention our names for the wedding rate before the first of May.",
+        schedule: `Recepción ${SEP} 3:30\u00a0p.m.`,
+        ...reception,
+        mapHref: mapsUrl(`${reception.name}, ${reception.address}`),
       },
     ],
   },
 
   dressCode: {
-    label: "What to wear",
-    title: "Garden party formal",
+    label: "Código de vestimenta",
+    title: "Formal",
     paragraphs: [
       {
-        bold: "Suits and summer dresses.",
-        text: " Jackets encouraged for the ceremony, happily shed by the first dance.",
+        bold: "Hombres:",
+        text: " traje, de preferencia azul marino. ¡Queremos verlos muy guapos!",
       },
       {
-        text: "The ceremony and drinks are on grass, so consider your heels warned. Evenings at Ashfield run cool; bring a layer for the terrace.",
+        bold: "Mujeres:",
+        text: " vestido del color que más te guste, excepto blanco o rojo.",
       },
       {
-        text: "We would love you in soft colours. Please leave white to the bride and lycra to the honeymoon.",
+        text: "La fiesta dura hasta la madrugada, así que trae zapatos con los que puedas bailar toda la noche y algo para abrigarte cuando refresque.",
       },
     ],
-    image: { src: "/img/fashion.jpg", alt: "Dress code" },
+    image: { src: "/img/fashion.jpg", alt: "Novio de esmoquin tomando de las manos a la novia con velo" },
   },
 
   faq: {
-    label: "A few small things",
-    title: "Questions, answered",
+    label: "Algunos detalles",
+    title: "Preguntas frecuentes",
     items: [
       {
-        question: "Can we bring the children?",
+        question: "¿Puedo llevar a mis hijos?",
         answer:
-          "We adore them, but this one is grown-ups only, with the exception of babes in arms. Consider it a night off.",
+          "Queremos mucho a sus pequeños, pero esta celebración es exclusiva para adultos. Tómalo como una noche para consentirte.",
       },
       {
-        question: "What about gifts?",
-        answer:
-          "Your company is honestly enough. If you would like to give something, a contribution to our honeymoon fund would be wonderful.",
+        question: "¿Hay mesa de regalos?",
+        answer: `Tu presencia es nuestro mejor regalo. Si quieres tener un detalle con nosotros, tenemos mesa de regalos en ${giftRegistry.store} con el número de evento ${giftRegistry.eventNumber}. También puedes hacer una transferencia a ${giftRegistry.bank}, a nombre de ${giftRegistry.holder}, CLABE ${giftRegistry.clabe}.`,
       },
       {
-        question: "Will there be photos?",
+        question: "¿Habrá fotos?",
         answer:
-          "A photographer will be with us all day. We would love the ceremony itself unplugged: phones away for twenty minutes, then snap freely.",
-      },
-      {
-        question: "Confetti?",
-        answer: "Yes please, dried petals only. We will have baskets of them ready outside the walled garden.",
+          "Sí, un fotógrafo profesional nos acompañará todo el día. Si quieres una foto con nosotros, pídela con toda confianza.",
       },
     ],
   },
 
   footer: {
-    date: "The fourteenth of June, two thousand and twenty seven",
-    first: "Margot",
+    date: "Doce de abril de dos mil veintisiete",
+    first: "Sam",
     amp: "&",
-    second: "Henry",
+    second: "Eder",
     credit: {
-      template: "Forever Lite by ",
+      template: "Forever Lite por ",
       author: { label: "Mike Smith Design", href: "https://github.com/mikesmithdesign" },
-      middle: " — free template • Distributed by ",
+      middle: " — plantilla gratuita • Distribuida por ",
       distributor: { label: "ThemeWagon", href: "https://themewagon.com" },
-      upsell: {
-        label: "Get the full theme with RSVP →",
-        href: "https://mikesmithdesign.gumroad.com/l/forever-astro-theme",
-      },
     },
   },
 } as const;
