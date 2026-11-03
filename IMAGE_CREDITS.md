@@ -2,10 +2,9 @@
 
 | File | Pexels ID |
 |---|---|
-| hero.jpg | 18398510 |
 | aisle.jpg | 28976226 |
-| beach.jpg | 15878603 |
-| hands.jpg | 13662186 |
 | fashion.jpg | 32778169 |
 
 Replace with your own photography for production.
+
+hero.avif, beach.avif y hands.avif son fotos propias de Sam y Eder.

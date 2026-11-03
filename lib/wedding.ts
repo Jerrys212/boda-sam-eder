@@ -60,7 +60,7 @@ export const wedding = {
     amp: "y",
     second: "Eder",
     details: `12 . 04 . 2025 ${SEP} Tultitlán, Estado de México`,
-    image: { src: "/img/hero.jpg", alt: "Pareja de novios abrazados" },
+    image: { src: "/img/hero.avif", alt: "Sam y Eder abrazados en un mirador con la Peña de Bernal al fondo" },
   },
 
   countdown: {
@@ -102,10 +102,10 @@ export const wedding = {
   },
 
   breather: {
-    main: { src: "/img/beach.jpg", alt: "Pareja de novios bailando sobre la arena" },
+    main: { src: "/img/beach.avif", alt: "Sam y Eder besándose bajo una jacaranda en flor" },
     inset: {
-      src: "/img/hands.jpg",
-      alt: "Manos de los novios con sus anillos de boda junto a un ramo de rosas blancas",
+      src: "/img/hands.avif",
+      alt: "Sam y Eder besándose de noche en un callejón empedrado iluminado por faroles",
     },
     note: "¡Te esperamos!",
   },
