@@ -38,7 +38,7 @@ export const wedding = {
     // TODO: dato real (confirmar la URL que asigne Vercel)
     siteUrl: "https://boda-sam-eder.vercel.app",
     ogImage: {
-      src: "/og-image.jpg",
+      src: "/og-image.jpg?v=2",
       width: 1200,
       height: 630,
       alt: "Sam y Eder · 12 de abril de 2025 · Tultitlán, Estado de México",
