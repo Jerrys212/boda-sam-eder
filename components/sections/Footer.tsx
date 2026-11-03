@@ -20,6 +20,7 @@ export default function Footer() {
             {credit.distributor.label}
           </a>
         </span>
+        <span>{footer.madeBy}</span>
       </div>
     </footer>
   );

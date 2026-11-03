@@ -174,5 +174,6 @@ export const wedding = {
       middle: " — plantilla gratuita • Distribuida por ",
       distributor: { label: "ThemeWagon", href: "https://themewagon.com" },
     },
+    madeBy: "Hecha por Gerardo\u00a0Garcia",
   },
 } as const;
