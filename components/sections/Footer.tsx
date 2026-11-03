@@ -20,9 +20,6 @@ export default function Footer() {
             {credit.distributor.label}
           </a>
         </span>
-        <a target="_blank" rel="noopener" href={credit.upsell.href}>
-          {credit.upsell.label}
-        </a>
       </div>
     </footer>
   );

@@ -24,7 +24,6 @@ export default function Hero() {
         <div className="hero-arch">
           <img src={hero.image.src} alt={hero.image.alt} id="heroImg" />
         </div>
-        <figcaption className="cap">{hero.caption}</figcaption>
       </figure>
     </header>
   );

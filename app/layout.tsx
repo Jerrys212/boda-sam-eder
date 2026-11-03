@@ -8,9 +8,12 @@ const { meta } = wedding;
 export const metadata: Metadata = {
   metadataBase: new URL(meta.siteUrl),
   title: meta.title,
+  description: meta.description,
   robots: { index: false },
   openGraph: {
     title: meta.title,
+    description: meta.description,
+    locale: "es_MX",
     type: "website",
     images: [{ url: meta.ogImage }],
   },
@@ -22,7 +25,7 @@ const staticModeScript =
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${cormorant.variable} ${montserrat.variable} ${windsong.variable}`}
       suppressHydrationWarning
     >
