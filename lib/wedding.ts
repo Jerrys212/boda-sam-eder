@@ -171,8 +171,6 @@ export const wedding = {
     credit: {
       template: "Forever Lite por ",
       author: { label: "Mike Smith Design", href: "https://github.com/mikesmithdesign" },
-      middle: " — plantilla gratuita • Distribuida por ",
-      distributor: { label: "ThemeWagon", href: "https://themewagon.com" },
     },
     madeBy: "Hecha por Gerardo\u00a0Garcia",
   },

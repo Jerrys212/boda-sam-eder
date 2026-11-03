@@ -15,10 +15,6 @@ export default function Footer() {
           <a target="_blank" rel="noopener" href={credit.author.href}>
             {credit.author.label}
           </a>
-          {credit.middle}
-          <a target="_blank" rel="noopener" href={credit.distributor.href}>
-            {credit.distributor.label}
-          </a>
         </span>
         <span>{footer.madeBy}</span>
       </div>
